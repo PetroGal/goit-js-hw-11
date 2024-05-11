@@ -43,6 +43,10 @@ function handleSubmit(event) {
       galleryEl.innerHTML = createGalleryItemMarkup(
         imagesData.hits.slice(0, 9)
       );
+      const lightbox = new SimpleLightbox('.gallery a', {
+        captionsData: 'alt',
+        captionsDelay: 250,
+      });
     })
     .catch(function (error) {
       console.log(error);
