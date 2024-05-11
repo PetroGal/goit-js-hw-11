@@ -46,6 +46,10 @@ function handleSubmit(event) {
     })
     .catch(function (error) {
       console.log(error);
+    })
+    .finally(() => {
+      event.target.reset();
+      loaderEl.classList.add('is-hidden');
     });
 }
 
