@@ -9,6 +9,11 @@ const searchFormEl = document.querySelector('.search-form');
 const loaderEl = document.querySelector('.loader');
 let galleryEl = document.querySelector('.gallery');
 
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
 function handleSubmit(event) {
   event.preventDefault();
   const searchQuery = event.target.elements.search.value.trim();
@@ -43,10 +48,7 @@ function handleSubmit(event) {
       galleryEl.innerHTML = createGalleryItemMarkup(
         imagesData.hits.slice(0, 9)
       );
-      const lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionsDelay: 250,
-      });
+      lightbox.refresh();
     })
     .catch(function (error) {
       console.log(error);
