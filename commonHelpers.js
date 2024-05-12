@@ -1,11 +1,10 @@
 import{S as m,i as c}from"./assets/vendor-8c59ed88.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&a(i)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function a(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const u=s=>s.map(({id:o,webformatURL:r,largeImageURL:a,tags:e,likes:t,views:i,comments:p,downloads:d})=>`<li class="gallery-item">
-   <a class="gallery-link" href="">
+   <a class="gallery-link" href="${a}">
     <img
     id=${o}
       class="gallery-image"
-      src=${r}
-      data-source=${a}
-      alt=${e}
+      src="${r}"
+      alt="${e}"
     />
    
     </a>
