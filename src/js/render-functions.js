@@ -1,8 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 export const createGalleryItemMarkup = images => {
   return images
     .map(
@@ -16,13 +11,12 @@ export const createGalleryItemMarkup = images => {
         comments,
         downloads,
       }) => `<li class="gallery-item">
-   <a class="gallery-link" href="">
+   <a class="gallery-link" href="${largeImageURL}">
     <img
     id=${id}
       class="gallery-image"
-      src=${webformatURL}
-      data-source=${largeImageURL}
-      alt=${tags}
+      src="${webformatURL}"
+      alt="${tags}"
     />
    
     </a>

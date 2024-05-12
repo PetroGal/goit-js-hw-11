@@ -48,6 +48,7 @@ function handleSubmit(event) {
       galleryEl.innerHTML = createGalleryItemMarkup(
         imagesData.hits.slice(0, 9)
       );
+
       lightbox.refresh();
     })
     .catch(function (error) {

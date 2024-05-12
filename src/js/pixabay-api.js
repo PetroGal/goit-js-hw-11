@@ -1,8 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '43776865-31502832095c6a436255fe0a5';
 
